@@ -8,7 +8,7 @@
           title="16-臺中市立圖書館 形象識別系統CIS徵件 民眾票選活動"
         >
           <p class="vote-img" style="background-color: ">
-            <img src="./index2_files/test1.jpg" />
+            <img src="../assets/images/test1.jpg" />
           </p>
           <h3 class="name">16</h3>
         </a>
@@ -18,7 +18,7 @@
           </div>
           <div class="vote-true">
             <a href="javascript:vote(135030);"
-              ><img src="./index2_files/icon-1.png" alt=""
+              ><img src="../assets/images/icon-1.png" alt=""
             /></a>
           </div>
         </div>
@@ -29,7 +29,7 @@
           title="18-臺中市立圖書館 形象識別系統CIS徵件 民眾票選活動"
         >
           <p class="vote-img" style="background-color: ">
-            <img src="./index2_files/test2.jpg" />
+            <img src="../assets/images/test2.jpg" />
           </p>
           <h3 class="name">18</h3>
         </a>
@@ -39,7 +39,7 @@
           </div>
           <div class="vote-true">
             <a href="javascript:vote(135032);"
-              ><img src="./index2_files/icon-1.png" alt=""
+              ><img src="../assets/images/icon-1.png" alt=""
             /></a>
           </div>
         </div>
@@ -50,7 +50,7 @@
           title="07-臺中市立圖書館 形象識別系統CIS徵件 民眾票選活動"
         >
           <p class="vote-img" style="background-color: ">
-            <img src="./index2_files/test3.jpg" />
+            <img src="../assets/images/test3.jpg" />
           </p>
           <h3 class="name">07</h3>
         </a>
@@ -60,7 +60,7 @@
           </div>
           <div class="vote-true">
             <a href="javascript:vote(135021);"
-              ><img src="./index2_files/icon-1.png" alt=""
+              ><img src="../assets/images/icon-1.png" alt=""
             /></a>
           </div>
         </div>
@@ -71,7 +71,7 @@
           title="10-臺中市立圖書館 形象識別系統CIS徵件 民眾票選活動"
         >
           <p class="vote-img" style="background-color: ">
-            <img src="./index2_files/test4.jpg" />
+            <img src="../assets/images/test4.jpg" />
           </p>
           <h3 class="name">10</h3>
         </a>
@@ -81,7 +81,7 @@
           </div>
           <div class="vote-true">
             <a href="javascript:vote(135024);"
-              ><img src="./index2_files/icon-1.png" alt=""
+              ><img src="../assets/images/icon-1.png" alt=""
             /></a>
           </div>
         </div>

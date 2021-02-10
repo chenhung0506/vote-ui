@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <input text='hello'>
     <router-view/>
   </div>
 </template>

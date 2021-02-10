@@ -1,5 +1,5 @@
 #!/bin/bash
-REPO=harbor.chlin.tk
+REPO=harbor.chlin.tk/vue
 CONTAINER=vote-ui
 TAG=$(git rev-parse --short HEAD)_$(date '+%Y%m%d%H%M%S')
 DOCKER_IMAGE=$REPO/$CONTAINER:$TAG
@@ -8,7 +8,13 @@ BUILDROOT=$DIR/../
 
 # init nginx default.conf
 rm default.conf
-SELF_IP=`ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n1`;
+
+SELF_IP='ERROR'
+if [ "$(uname)" == "Darwin" ]; then
+    SELF_IP='host.docker.internal';
+else 
+    SELF_IP=`ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n1`;
+fi
 API_IP=$SELF_IP:8333
 # export API_IP=$API_IP
 # echo "$(envsubst < default.conf.template)" >> default.conf
@@ -38,5 +44,6 @@ done
 
 echo $DOCKER_IMAGE
 
-docker rm -f utest
-docker run --name utest --restart always -p 8201:80 -d $DOCKER_IMAGE nginx -g 'daemon off;'
+docker rm -f $CONTAINER
+cmd="docker run --name $CONTAINER --restart always -p 8335:80 -d $DOCKER_IMAGE nginx -g 'daemon off;'"
+echo $cmd && eval $cmd
