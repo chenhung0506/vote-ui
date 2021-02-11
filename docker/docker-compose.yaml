@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  vote-ui:
+    container_name: vote-ui
+    image: harbor.chlin.tk/vue/vote-ui:${TAG}
+    volumes:
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 8335:80
+    restart: always
+    networks: 
+      - nginx
+networks:
+  nginx:
+    external: true
+    name: nginx
