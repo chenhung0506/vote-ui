@@ -2,6 +2,9 @@
   <div class="image-list">
     <h1>{{ msg }}</h1>
     <div id="status">hello</div>
+    <div id="fb-root"></div>
+    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&autoLogAppEvents=1&version=v9.0&appId=2728835197369002" nonce="V0jfwh00"></script> -->
+    <div class="fb-login-button" data-width="100" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="true"></div>
     <button
       @click="checkLoginState()"
       scope="public_profile,email"
@@ -125,6 +128,10 @@ export default {
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       } (document, 'script', 'facebook-jssdk'));
+    let externalScript = document.createElement('script')
+    externalScript.setAttribute('src', 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&autoLogAppEvents=1&version=v9.0&appId=2728835197369002')
+    document.head.appendChild(externalScript)
+
   },
   methods: {
     statusChangeCallback(response) {
