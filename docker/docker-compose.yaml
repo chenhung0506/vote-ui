@@ -6,7 +6,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime
     ports:
-      - 8335:80
+      - 8335:8335
     restart: always
     networks: 
       - nginx

@@ -45,5 +45,5 @@ done
 echo $DOCKER_IMAGE
 
 docker rm -f $CONTAINER
-cmd="docker run --name $CONTAINER --restart always -p 8335:80 -d $DOCKER_IMAGE nginx -g 'daemon off;'"
+cmd="docker run --name $CONTAINER --restart always -p 8335:8335 -d $DOCKER_IMAGE nginx -g 'daemon off;'"
 echo $cmd && eval $cmd
