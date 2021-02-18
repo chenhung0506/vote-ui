@@ -4,6 +4,7 @@ import vote from '@/components/vote'
 import manage from '@/components/manage'
 
 Vue.use(Router)
+Vue.config.productionTip = false
 
 export default new Router({
   routes: [
