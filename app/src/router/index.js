@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import vote from '@/components/vote'
+import manage from '@/components/manage'
 
 Vue.use(Router)
 
@@ -10,6 +11,11 @@ export default new Router({
       path: '/',
       name: 'vote',
       component: vote
+    },
+    {
+      path: '/manage',
+      name: 'manage',
+      component: manage
     }
   ]
 })
