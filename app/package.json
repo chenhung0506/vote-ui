@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "vue": "^2.5.2",
+    "bootstrap-vue": "2.0.0-rc.19",
+    "vue": "^2.5.22",
+    "vue-recaptcha-v3": "1.5.0",
     "vue-router": "^3.0.1",
     "vuetable-2": "^2.0.0-beta.4"
   },

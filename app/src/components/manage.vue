@@ -1,4 +1,5 @@
 <template>
+<!-- https://www.vuetable.com/guide -->
 	<div id="app" class="ui container">
 		<h1>Vuetable-2</h1>
 		<vuetable ref="vuetable"
@@ -12,21 +13,17 @@
 			<div slot="actions" slot-scope="props">
 				<button 
 					class="ui small button" 
-					@click="onActionClicked('view-item', props.rowData)"
-				>
-					<i class="zoom icon"></i>
-				</button>
-				<button 
-					class="ui small button" 
 					@click="onActionClicked('edit-item', props.rowData)"
 				>
 					<i class="edit icon"></i>
+        edit
 				</button>
 				<button 
 					class="ui small button" 
 					@click="onActionClicked('delete-item', props.rowData)"
 				>
 					<i class="delete icon"></i>
+          delete
 				</button>
 			</div>
 		</vuetable>
@@ -123,9 +120,9 @@ export default {
   color: #2c3e50;
   margin-top: 20px;
 }
-button.ui.button {
+/* button.ui.button {
   padding: 8px 3px 8px 10px;
 	margin-top: 1px;
 	margin-bottom: 1px;
-}
+} */
 </style>
