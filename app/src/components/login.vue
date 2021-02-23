@@ -44,25 +44,6 @@
             required="required"
           />
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Favourite Platform</label>
-          <select
-            class="form-control"
-            id="exampleFormControlSelect1"
-            v-model="platform"
-            required="required"
-          >
-            <option>Github</option>
-            <option>Gitlab</option>
-            <option>Bitbucket</option>
-          </select>
-        </div>
-        <hr />
-        <div class="form-group mt-3">
-          <label class="mr-2">Upload your CV:</label>
-          <input type="file" @change="processFile($event)" />
-        </div>
-        <hr />
         <div class="success" v-if="isSuccess">
           We received your submission, thank you!
         </div>
@@ -95,9 +76,6 @@ export default {
     };
   },
   methods: {
-    processFile(event) {
-      this.files = event.target.files[0];
-    },
     onSubmit() {
       this.message = "";
       let data = {
@@ -109,7 +87,8 @@ export default {
 
       this.$recaptcha("login").then((token) => {
         data["g-recaptcha-response"] = token;
-
+        console.log('secret key===>')
+        console.log(data)
         axios
           .post(
             "https://getform.io/f/b22f10be-75a6-40c0-9ec6-3519dc38fe29",
