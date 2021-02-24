@@ -1,4 +1,6 @@
 <template>
+<!-- https://codesandbox.io/s/n3p4y?file=/src/App.vue -->
+<!-- https://www.google.com/recaptcha/admin/site/442799781/setup -->
   <div>
     <div class="col-md-6 offset-md-3 mt-5">
       <a target="_blank" href="https://getform.io?ref=codeSandboxVue">
@@ -84,14 +86,15 @@ export default {
         platform: this.platform,
         file: this.files,
       };
-
+      let recaptch_api = document.location.protocol + '//' + window.location.host + '/vote/recaptcha'
+      console.log(recaptch_api)
       this.$recaptcha("login").then((token) => {
         data["g-recaptcha-response"] = token;
         console.log('secret key===>')
         console.log(data)
         axios
           .post(
-            "https://getform.io/f/b22f10be-75a6-40c0-9ec6-3519dc38fe29",
+            recaptch_api,
             data,
             {
               headers: {

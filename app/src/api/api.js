@@ -1,8 +1,9 @@
-// const PROTO_HOST = document.location.protocol + '//' + window.location.host
+// for container vote-ui
+const PROTO_HOST = document.location.protocol + '//' + window.location.host
 // for local test
 // const PROTO_HOST = document.location.protocol + '//172.20.10.2:'
 // for frontend nginx
-const PROTO_HOST = document.location.protocol + '//172.20.10.2:' + location.port
+// const PROTO_HOST = document.location.protocol + '//172.20.10.2:' + location.port
 const axios = require('axios')
 
 var api = {

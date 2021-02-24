@@ -1,5 +1,6 @@
 <template>
 <!-- https://www.vuetable.com/guide -->
+<!-- https://codesandbox.io/s/9lw23ryqko?module=/VuetableBootstrap4Config.js&file=/components/VuetablePaginationBootstrap4.vue -->
 	<div id="app" class="ui container">
 		<h1>Vuetable-2</h1>
 		<vuetable ref="vuetable"

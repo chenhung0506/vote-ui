@@ -25,6 +25,13 @@ do
     sed -e "s/\${API_IP}/$API_IP/g" >> default.conf
 done < default.conf.template
 
+if [[ "$1" =~ ^[0-9] ]]
+    then
+    echo "npm run build:" $@
+    cd ../app
+    npm run build
+fi
+
 
 # Build docker
 cd $BUILDROOT
